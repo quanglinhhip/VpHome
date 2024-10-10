@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kế hoạch dự án - Nhà hàng và Đặt món ăn</title>
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #343a40;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #495057;
+            margin-bottom: 20px;
+            font-size: 36px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #007bff;
+            margin-top: 20px;
+            font-size: 28px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 10px 0;
+            padding: 10px 0;
+        }
+
+        ul li {
+            margin-bottom: 12px;
+            padding: 12px;
+            background-color: #f1f3f5;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        ul li:hover {
+            background-color: #e9ecef;
+        }
+
+        ul li::before {
+            content: "• ";
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        /* Sublist styles */
+        ul ul {
+            margin-left: 20px;
+        }
+
+        ul ul li {
+            background-color: #e9ecef;
+        }
+
+        ul ul li:hover {
+            background-color: #dee2e6;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #6c757d;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Kế hoạch dự án - Nhà hàng và Đặt món ăn</h1>
+
+    <div class="container">
+
+        <div>
+            <h2>Xác thực & Ủy quyền</h2>
+            <ul>
+                <li>Đăng ký và đăng nhập người dùng (dành cho khách hàng và quản trị viên)</li>
+                <li>Vai trò quản trị
+                    <ul>
+                        <li>Quản trị viên</li>
+                        <li>Quản lý nhà hàng</li>
+                        <li>Nhân viên</li>
+                    </ul>
+                </li>
+                <li>Vai trò người dùng (khách hàng)</li>
+            </ul>
+        </div>
+
+
+        <div>
+            <h2>Quản lý đơn hàng</h2>
+            <ul>
+                <li>Xem đơn hàng (dành cho Quản trị viên và Nhà hàng)</li>
+                <li>Quản lý trạng thái đơn hàng
+                    <ul>
+                        <li>Đang chờ</li>
+                        <li>Đang xử lý</li>
+                        <li>Đã giao</li>
+                        <li>Đã hủy</li>
+                    </ul>
+                </li>
+                <li>Thông báo
+                    <ul>
+                        <li>Xác nhận đơn hàng</li>
+                        <li>Cập nhật trạng thái</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2>Quản lý món ăn(Quản trị viên/Quản lý nhà hàng)</h2>
+            <ul>
+                <li>Thêm/Sửa/Xóa món ăn</li>
+                <!-- <li>Thêm/Sửa/Xóa Thực đơn và Món ăn</li> -->
+                <li>Quản lý danh mục
+                    <ul>
+                        <li>Món khai vị</li>
+                        <li>Món chính</li>
+                        <li>Món tráng miệng</li>
+                    </ul>
+                </li>
+                <li>Quản lý đơn hàng</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Quản lý thương mại</h2>
+            <ul>
+                <li>quản lý voucher</li>
+                <li> Các cổng thanh toán online</li>
+                <li>Các khu vực giao hàng</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Quản lý blog</h2>
+            <ul>
+                <li>Danh mục blog</li>
+                <li>Blog</li>
+                <li>comment</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Tính năng người dùng (Khách hàng)</h2>
+            <ul>
+                <li>Order trực tiếp</li>
+                <li>Order online</li>
+                <li>Đặt trước</li>
+                <li>Thêm vào giỏ hàng</li>
+                <li>Tích hợp thanh toán & kiểm tra</li>
+                <li>Theo dõi đơn hàng</li>
+            </ul>
+        </div>
+
+
+
+
+        <h2>Bảng điều khiển quản trị</h2>
+        <ul>
+            <li>Bảng điều khiển có số liệu thống kê
+                <ul>
+                    <li>Tổng đơn hàng</li>
+                    <li>Doanh thu</li>
+                </ul>
+            </li>
+            <li>Quản lý người dùng, sản phẩm, đơn hàng, thương mại</li>
+            <li>Các tính năng phụ</li>
+            <ul>
+                <li>slider</li>
+                <li>món ưu đãi hàng ngày</li>
+                <li>blog(danh mục blog, blog, comment)</li>
+                <li>đầu bếp</li>
+            </ul>
+        </ul>
+    </div>
+
+    <footer>
+        &copy; 2024 Dự án Nhà hàng và Đặt món ăn. All rights reserved.
+    </footer>
+
+</body>
+
+</html>
