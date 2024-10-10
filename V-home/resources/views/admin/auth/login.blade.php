@@ -48,13 +48,26 @@
             </div>
             <div class="col-md-6">
                 <div class="ibox-content">
+                    {{-- @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif --}}
                     <form method="POST" class="m-t" action="{{ route('auth.login') }}">
                         @csrf
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Username" name="email">
-                            @if ($errors->has('email'))
+                            <input type="text" class="form-control" placeholder="email" name="email"
+                                value="{{ old('email') }}">
+                            {{-- @if ($errors->has('email'))
                                 <span class="error-message">* {{ $errors->first('email') }}</span>
-                            @endif
+                            @endif --}}
+                            @error('email')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
                         </div>
                         <div class="form-group">
                             <input type="password" class="form-control" placeholder="Password" name="password">
