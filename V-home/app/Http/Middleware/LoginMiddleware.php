@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
 
-class AuthLogin
+class LoginMiddleware
 {
     /**
      * Handle an incoming request.
@@ -16,10 +16,11 @@ class AuthLogin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (Auth::id() == null) {
-            return redirect()->route('auth.admin')->with('error', 'You need  login first.');
+
+
+        if (Auth::id() > 0) {
+            return redirect()->route('dashboard.index');
         }
         return $next($request);
     }
-
 }
