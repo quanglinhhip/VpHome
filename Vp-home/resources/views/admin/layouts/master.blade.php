@@ -12,10 +12,13 @@
     <link href="{{ asset('theme/admin/font-awesome/css/font-awesome.css') }}" rel="stylesheet">
 
     @yield('style-libs')
+
     <link href="{{ asset('theme/admin/css/animate.css') }}" rel="stylesheet">
     <link href="{{ asset('theme/admin/css/style.css') }}" rel="stylesheet">
+    {{-- <link href="{{ asset('theme/admin/css/customize.css') }}" rel="stylesheet"> --}}
 
 
+    @yield('styles')
 </head>
 
 <body>
@@ -48,7 +51,18 @@
     <script src="{{ asset('theme/admin/js/plugins/metisMenu/jquery.metisMenu.js') }}"></script>
     <script src="{{ asset('theme/admin/js/plugins/slimscroll/jquery.slimscroll.min.js') }}"></script>
 
-    @yield('script-libs')
+     <!-- jQuery UI -->
+     <script src="{{ asset('theme/admin/js/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
+
+        @yield('script-libs')
+
+     <!-- Custom and plugin javascript -->
+    <script src="{{ asset('theme/admin/js/inspinia.js') }}"></script>
+    <script src="{{ asset('theme/admin/js/plugins/pace/pace.min.js') }}"></script>
+
+
+
+    @yield('scripts')
 </body>
 
 </html>

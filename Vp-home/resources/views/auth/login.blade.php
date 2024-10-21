@@ -13,7 +13,17 @@
 
     <link href="{{ asset('theme/admin/css/animate.css') }}" rel="stylesheet">
     <link href="{{ asset('theme/admin/css/style.css') }}" rel="stylesheet">
-    <link href="{{ asset('theme/admin/css/customize.css') }}" rel="stylesheet">
+    {{-- <link href="{{ asset('theme/admin/css/customize.css') }}" rel="stylesheet"> --}}
+
+    <style>
+        .error-message{
+    color: red;
+    font-size: 12px;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+    </style>
 
 </head>
 

@@ -59,7 +59,7 @@
         </div>
     </div>
 
-    <div class="row">
+    {{-- <div class="row">
         <div class="col-lg-12">
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
@@ -426,7 +426,7 @@
             </div>
 
         </div>
-    </div>
+    </div> --}}
 @endsection
 
 @section('script-libs')
@@ -442,13 +442,6 @@
     <!-- Peity -->
     <script src="{{ asset('theme/admin/js/plugins/peity/jquery.peity.min.js') }}"></script>
     <script src="{{ asset('theme/admin/js/demo/peity-demo.js') }}"></script>
-
-    <!-- Custom and plugin javascript -->
-    <script src="{{ asset('theme/admin/js/inspinia.js') }}"></script>
-    <script src="{{ asset('theme/admin/js/plugins/pace/pace.min.js') }}"></script>
-
-    <!-- jQuery UI -->
-    <script src="{{ asset('theme/admin/js/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
 
     <!-- Jvectormap -->
     <script src="{{ asset('theme/admin/js/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js') }}"></script>

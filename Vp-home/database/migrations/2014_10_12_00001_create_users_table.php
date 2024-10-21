@@ -24,7 +24,7 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->text('user_agent')->nullable();
             $table->text('ip')->nullable();
-
+            $table->boolean('status')->default(true);
 
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();

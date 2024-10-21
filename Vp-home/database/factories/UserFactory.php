@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
 /**
@@ -19,10 +20,22 @@ class UserFactory extends Factory
     {
         return [
             'name' => fake()->name(),
+            'phone' => fake()->phoneNumber(),
+            'province_id' => fake()->numberBetween(1, 63), // Giả sử bạn có 63 tỉnh
+            'district_id' => fake()->numberBetween(1, 1000), // Giả sử bạn có 1000 quận/huyện
+            'ward_id' => fake()->numberBetween(1, 10000), // Giả sử bạn có 10000 phường/xã
+            'address' => fake()->address(),
+            'birthday' => fake()->date(),
+            'image' => fake()->imageUrl(640, 480, 'people'),
+            'description' => fake()->text(200),
             'email' => fake()->unique()->safeEmail(),
-            'email_verified_at' => now(),
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
-            'remember_token' => Str::random(10),
+            'password' => Hash::make('password'), // Mật khẩu mẫu
+            'status' => fake()->randomElement(['0', '1']),
+            // 'name' => fake()->name(),
+            // 'email' => fake()->unique()->safeEmail(),
+            // 'email_verified_at' => now(),
+            // 'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+            // 'remember_token' => Str::random(10),
         ];
     }
 
